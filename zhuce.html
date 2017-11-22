@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LEVI'S</title>
+    <style>
+        /*--通用样式--*/
+        body,ul,li,h1,h2,h3{
+            margin: 0px;
+            padding: 0px;
+            font-family: arial;
+        }
+        .clearfix:before,
+        .clearfix:after{
+            content: " ";
+            display: table;
+            clear: both;
+        }
+        header,.banner1,.banner2{
+            margin:0 auto;
+            width: 100%;
+            overflow: hidden;
+        }
+       
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        h1{
+            display: none;
+        }
+      
+        /*--通用样式--*/
+        /*--header样式--*/
+        header{
+            border-bottom: #dcdcdc 3px solid;
+            margin-bottom: 25px;
+            z-index: 1;
+            background: #fff;
+            position: fixed;
+            top: 0;
+
+        }
+        .header-top{
+            width: 100%;
+            background: #333333;
+            height: 37px;
+           padding-left: 37px;
+             
+        }
+        .header-top span{
+            color: #fff;
+            font-size: 13px;
+            line-height: 37px;
+        }
+        .header-top-for{
+            float: right;
+            margin-right: 54px;
+        }
+        .header-top-for a{
+            display: block;
+            float: left;
+            color: aliceblue;
+            font-size: 13px;
+            line-height: 37px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .header-button{
+             width: 100%;
+            padding: 0 33px 0 33px;
+            overflow: hidden;
+            
+        }
+        .header-button .logo{
+            float: left;
+        }
+        .header-button nav{
+           width: 500px;
+            float: left;
+            line-height: 60px;
+        }
+        .header-button nav ul li {
+                list-style: none;
+                float: left;
+            }
+        .header-button nav ul li a{
+                    text-align: center;
+                    text-decoration: none;
+                    display:block;
+                    font-weight: 700;
+                    font-size:14px;
+                    padding-right: 12px;
+                    padding-left: 12px;
+                    color: #333333;
+        }
+        
+        nav ul li a:hover{color: red;
+           }
+        .header-button-for{
+            float: right;
+            padding-top: 20px;
+            width: 377px;
+        }
+        .sousuo{
+            margin-left: 25px;
+            margin-right: 5px;
+            width: 173px;
+            height: 17px;
+            border: #fff solid 1px;
+            border-bottom: #545454 solid 3px;
+            color: #000;
+        }
+        .xc{
+            margin-left: 25px;
+        }
+        .sousuo,.x1,.xc,.xj{
+            float: left;
+            
+        }
+        
+        /*--main1样式--*/
+        .main{
+            width: 1007px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .main4,.main1{
+            float: left; 
+            width: 190px;
+            overflow: hidden;
+        }
+        .main23{
+            float:left;
+            width: 627px;
+        }
+       .main23 .int{
+            width: 246px;
+            height: 26px;
+            color: #000;
+            font-size: 12px;
+            border: solid 1px #b1b1b1;
+            
+       }
+       .tc{
+            width: 120px;
+            height: 38px;
+            background: #c31e2e;
+            
+            font-size: 20px;
+            margin-bottom: 6px;
+            font-family: 楷体;
+       }
+        .main h2{
+            margin-bottom: 23px;
+              font-family: 楷体;
+        }
+       
+         /*--main23样式--*/
+         .banner{
+            margin-bottom: 20px;
+            
+        }
+         .banner-top{
+            text-align: center;
+            margin: 0 auto;
+            font-size: 16px;
+            font-weight: 200;
+           padding-bottom: 16px;
+             margin-top: 47px;
+             border-bottom: #dcdcdc 3px solid;
+             margin-bottom: 16px;
+
+        }
+        /*--footer样式--*/
+        .footer-top{
+            overflow: hidden;
+            border-top: 2px solid #e6e6e6 ;
+            padding-top: 33px;
+            padding-bottom: 33px;
+            margin-top: 40px;
+        }
+        .ftl,.ftz,.ftr{
+            float: left;
+        }
+        .footer-top .ftl span{
+            font-weight: 800;
+        }
+        .footer-top .ftl p{
+           font-size: 12px;
+           text-align:right;
+        }
+        .footer-top .ftz input{
+            width: 242px;
+            height: 33px;
+            color: #bebac1;
+            font-size: 15px;
+        }
+        .footer-top .ftr span{
+            display: inline-block;
+            border-left: solid 2px #d8d8d8;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 10px;
+            line-height: 30px;
+        }
+        .ftz{
+            margin-left: 20px;
+            margin-right: 40px;
+        }
+        .footer-top .ftz a{
+            display: inline-block;
+            padding:5px 10px 5px 10px;
+            line-height: 33px;
+            width: 100px;
+            text-align: center;
+            background: #333333;
+            color: #fff;
+        }
+        .weixin,.weibo{
+            float: right;
+            margin-top: 10px;
+        }
+        .weixin{
+            margin-left: 10px;
+        }
+        .fti,.fbi{
+            width: 1024px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .fti span,.ppt{
+            margin-left: 56px;
+        }
+        .logo2{
+            padding-left: 450px;
+            margin-bottom: 25px;
+        }
+        .zaixian{
+            margin-left: 140px;
+        }
+        .footer-button{
+           background-color: #f5f5f5;
+            overflow: hidden;
+           
+        }
+        .footer-button .fbi .nva2 a{
+            color: #341f2f;
+        }
+        .fbi .lxwm{
+            display: block;
+            font-size: 23px;
+            font-weight: 500;
+            border-top: solid 2px #000;
+            padding-top: 30px;
+            padding-bottom: 24px;
+            width: 122px;
+            margin: 0 auto;
+            margin-top: 29px;
+            text-align: center;
+        }
+        .corp{
+            width: 300px;
+            font-size: 10px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .copy{
+            width: 100%;
+            font-size: 10px;
+            
+        }
+        .copy span{
+            width: 100%;
+            text-align: right;
+            font-size: 10px;
+            display: block;
+            background: #b5b5b5;
+            padding: 5px 0 5px 0;
+            margin-top: 30px;
+        }
+        /*d登录页*/
+        .denluye{
+            display: none;
+            overflow: hidden;
+            width: 260px;
+            position:fixed;
+            background: #fff;
+            top:30px;
+            right: 50px;
+            z-index: 2;
+            border:solid 2px #000;
+        }
+         .denluye input{
+            width: 210px;
+            height: 25px;
+            color: #000;
+            font-size:12px;
+            border:solid 1px #b1b1b1;
+            margin-left: 20px;
+            margin-bottom: 5px;
+
+        }
+        #duigouy{
+            color: red;
+            width: 12px;
+            height: 12px;
+            border: solid 2px #000;
+            margin: 2px 0 0 0;
+            padding: 0;
+
+        }
+        .denluye p {
+            font-size: 12px;
+            color: #000;
+            margin-left: 36px; 
+        }
+        .denluye p span{
+            margin-right: 56px;
+        }
+        .in2{
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        .denlua,.denlub,.denluc{
+            color: #fff;
+            display: block;
+            padding: 9px 10px 9px 10px;
+            margin-left: -20px;
+            width: 200px;
+            text-align: center;
+             margin-top: 8px;
+            margin-bottom: 8px;
+
+        }
+        .denluc{
+            background: #fff;
+            color: #000;
+            border: solid 2px #000;
+          
+        }
+        .denlua{
+            background: #c31e2e;
+           
+        }
+        .denlub{
+            background: #333333;
+            
+        }
+        .denluye .wang{
+            margin-right: 20px;
+        }
+        .denluye h2{
+             font-size: 13px;
+            color: #000;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 5px;
+        }
+        .denluye hr{
+            text-align: center;
+            width: 240px;
+        }
+        .qqw{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .pmm{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+         fieldset{
+            width: 450px;
+            margin: 0 auto;
+            border: none;
+        }
+        label{
+            width: 100px;
+            float: left;
+            text-align: right;
+        }
+        fieldset span{
+            font-size: 12px;
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+    <script>
+        function xianshi(){
+            document.getElementById('denluyea').style.display="block";
+        }
+        function xiaoshi(){
+            document.getElementById('denluyea').style.display="none";
+        }
+        function tingliu(){
+            document.getElementById("denluyea").style.display="block"
+        }
+         function tingliua(){
+            document.getElementById("denluyea").style.display="none"
+        }
+        
+        function checkName(){
+            var a=document.getElementById("name").value;
+            if(!isNaN(a)){
+                document.getElementById("nameSpan").innerHTML="不能为纯数字";
+            }else if(a.length>2){
+                document.getElementById("nameSpan").innerHTML="ok";
+            }
+        }
+        function checkPwd(){
+            var a=document.getElementById("pwd1").value;
+            if(a==""){
+                document.getElementById("pwd1Span").innerHTML="不能为空";
+            }else if(!isNaN(a)){
+                document.getElementById("pwd1Span").innerHTML="不能为纯数字";
+            }else if(a.length<6){
+                document.getElementById("pwd1Span").innerHTML="不能少于6位";
+            }else if(a.length >10){
+                document.getElementById("pwd1Span").innerHTML="不能多于10位";
+            }else{
+                document.getElementById("pwd1Span").innerHTML="ok";
+            }
+        }
+        function checkPwd2(){
+            var a=document.getElementById("pwd1").value;
+            var b=document.getElementById("pwd2").value;
+            if(a!=b){
+                document.getElementById("pwd2Span").innerHTML="两次输入不一致";
+            }else{
+                document.getElementById("pwd2Span").innerHTML="ok";
+            }
+        }
+        function checkAge(){
+            var a=document.getElementById("age").value;
+            if(a==""){
+                document.getElementById("ageSpan").innerHTML="请输入年龄";
+            }else if(isNaN(a)) {
+                document.getElementById("ageSpan").innerHTML="请输入数字";
+            }else if(a<18){
+                document.getElementById("ageSpan").innerHTML="未成年";
+            }else if(a>100){
+                document.getElementById("ageSpan").innerHTML="您的输入有误";
+            }else{
+                document.getElementById("ageSpan").innerHTML="ok";
+            }
+        }
+        function checkid(){
+            var  a=document.getElementById("idCard").value;
+            var b=/(^\d{15}$)|(^\d{17}(\d|X)$)/;    //检测身份证号的？
+            if(b.test(a)){
+                document.getElementById("idCardSpan").innerHTML="ok";
+            }else{
+                document.getElementById("idCardSpan").innerHTML="no";
+            }
+        }
+        function checksj(){
+            var a=document.getElementById("phoneNum").value;
+            var b=/^1\d{10}$/
+            if(b.test(a)){
+                document.getElementById("phoneNumSpan").innerHTML="ok";
+            }else{
+                document.getElementById("phoneNumSpan").innerHTML="no";
+            }
+        }
+        function checkem(){
+            var a=document.getElementById("email").value;
+            var b=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/
+            if(b.test(a)){
+                document.getElementById("emailSpan").innerHTML="ok";
+            }else{
+                document.getElementById("emailSpan").innerHTML="no";
+            }
+        }
+        function checkAll() {
+            var name = document.getElementById("name").value; //姓名
+            var age = document.getElementById("age").value; //年龄
+            var cId = document.getElementById("idCard").value; //身份证号
+            var pNm = document.getElementById("phoneNum").value; //手机号
+            var email = document.getElementById("email").value; //邮箱
+            var pwd = document.getElementById("pwd1").value; //密码
+//            if(name==""||age==""||cId==""||pNm==""||email==""||pwd=="") {
+//                alert("姓名，年龄，身份证号必填")
+//
+//            }
+            if (name == "") {
+                alert("姓名必填");
+            } else if (age == "") {
+                alert("年龄必填");
+            } else if (cId == "");{
+                alert("身份证号必填");
+            }
+            if (pwd == "");{
+                alert("密码必填");
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <!-- top -->
+       <a href="#" class="top-3"><img src="images/top_03.jpg" alt=""></a>
+       <!-- 登录页 -->
+        <div class="denluye" id="denluyea" onmousemove="tingliu()" onmouseleave="tingliua()">
+            <h2>登录</h2>
+            <hr>
+            <input type="text" placeholder="*请输入您的手机号">
+            <input type="text" class="in2" placeholder="*请输入密码">
+            <p><input type="checkbox" id="duigouy" value="" checked="checked"><span>记住我 </span><u><a href="#" class="wang" style="color:#000;">忘记密码？</a></u></p>
+            <p><a href="#" class="denlua">登录</a></p>
+             <p class="pmm">使用第三方账号登录：<a href="#"><img class="qqw" src="images/qq.jpg" alt=""></a><a href="#"><img class="qqw" src="images/qq2.jpg" alt=""></a></p>
+             <hr>
+            <p><a href="zhuce.html" class="denlub">注册</a></p>
+             <p><a href="#" class="denluc">订单查询</a></p> 
+        </div>
+        <!-- header -->
+    <header>
+        <div class="header-top">
+            <span>受春节假期影响，1月26日15点之后的订单将于1月30日起寄出，敬请谅解。</span>
+            <div class="header-top-for">
+                <a href="#">会员登录</a>
+                <a href="#"  onmousemove="xianshi()" onmouseleave="xiaoshi()">用户登录</a>
+                <a href="#">在线客服</a>
+            </div>
+        </div>
+        <div class="header-button">
+            <div class="logo clearfix">
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <h1>LEVI'S</h1>
+            <nav class="clearfix">
+                <ul>
+                    <li><a href="#">新品</a></li>
+                    <li><a href="nanzhuang.html">男装</a></li>
+                    <li><a href="nvzhuang.html">女装</a></li>
+                    <li><a href="tongzhuang.html">童装</a></li>
+                    <li><a href="#">精选系列</a></li>
+                    <li><a href="index.html">SALE</a></li>
+                    <li><a href="dongtai.html">品牌动态</a></li>
+                </ul>
+            </nav>
+            <div class="header-button-for clearfix">
+                <a href="#" class="x1"><img src="images/x1.jpg" alt=""></a>
+                 <input class="sousuo" placeholder="羽绒服" type="texe">
+               
+                <a href="#" class="xj"><img src="images/xj.jpg" alt=""></a>
+                 <a href="#" class="xc"><img src="images/xc.jpg" alt=""></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner-top">
+        Levi's 官方商城 注册 
+    </div>
+    <div class="main clearfix">
+        <div class="main1">
+            <img src="images/zhuce1.jpg" alt="">
+        </div>
+        <div class="main23">
+            <form action="#" method="post">
+    <fieldset>
+        <legend>注册信息</legend>
+        <P><label>姓名：</label><input placeholder="*请输入您的姓名" class="int" type="text" id="name" onkeyup="checkName()"/><span id="nameSpan">*必填</span></P>
+        <P><label>性别：</label><input type="radio" name="sex"/>男<input type="radio" name="sex"/>女</P>
+        <P><label>年龄：</label><input placeholder="*请输入您的年龄" class="int" type="text" id="age" onblur="checkAge()"/><span id="ageSpan"></span></P>
+        <P><label>身份证号：</label><input class="int" placeholder="*请输入您的身份证号" type="text" id="idCard" onkeyup="checkid()"/><span id="idCardSpan"></span></P>
+        <P><label>手机号：</label><input placeholder="*请输入您的手机号" class="int" type="text" id="phoneNum" onkeyup="checksj()"/><span id="phoneNumSpan"></span></P>
+        <P><label>邮箱：</label><input class="int" placeholder="*请输入您的邮箱" type="text" id="email" onkeyup="checkem()"/><span id="emailSpan"></span></P>
+        <P><label>密码：</label><input class="int" type="password" id="pwd1" placeholder="*请输入您的密码，6-20位字节且不能含有特殊字符" onblur="checkPwd()"/><span id="pwd1Span"></span></P>
+        <P><label>确认密码：</label><input placeholder="*两次密码输入要一致" class="int" type="password" id="pwd2" onblur="checkPwd2()"/><span id="pwd2Span"></span></P>
+        <p align="center"><input type="submit" onclick="checkAll()" class="tc"> <input type="reset" class="tc"></p>
+    </fieldset>
+        </div>
+        <div class="main4">
+            <img src="images/zhuce2.jpg" alt="">
+        </div>
+    </div>
+    
+     <footer>
+        <div class="footer-top">
+            <div class="fti">
+            <div class="ftl clearfix">
+                <span>The Latest From Levi's</span>
+                <p class="ppt">第一时间获取最新资讯</p>
+            </div>
+            <div class="ftz clearfix">
+                <input type="text" value="请输入您的邮箱">
+                <a href="#">订阅</a>
+            </div>
+            <div class="ftr clearfix">
+                <a href="#" class="weixin clearfix"><img src="images/weixin.jpg" alt=""></a>
+                <a href="#" class="weibo clearfix"><img src="images/weibo.jpg" alt=""></a>
+                <span>关注我们：</span>
+            </div>
+            </div>
+        </div>
+        <div class="footer-button"> 
+            <div class="fbi">
+                <div class="logo2"><img src="images/logo2.jpg" alt=""></div>
+                <div class="nva2">                   
+                        <a class="zaixian" href="#">在线客服</a><img src="images/gang.jpg" alt="">
+                        <a href="#">门店查找</a><img src="images/gang.jpg" alt="">
+                        <a href="#">网站导航</a><img src="images/gang.jpg" alt="">
+                        <a href="#">支付与配送</a><img src="images/gang.jpg" alt="">
+                        <a href="#">退换政策</a><img src="images/gang.jpg" alt="">
+                        <a href="#">帮助</a>            
+                </div>
+                <span class="lxwm">联系我们</span>
+              <div class="corp">
+                <p class="corp">021-55369615或400-1080-501(9:00-18:00)
+                MBXCHNcustomservice@levi.com</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="copy">
+                    <span>利惠商业（上海）有限公司 | 沪ICP备12026822号 | <img src="images/jinghui.jpg" alt="">沪公网安备 3101006020000236号 | <img src="images/gongshang_13.jpg" alt="">上海工商</span>
+        </div>
+    </footer>
+</body>
+</html>

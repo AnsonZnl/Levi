@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LEVI'S</title>
+	<style>
+      /*--通用样式--*/
+        body,ul,li,p,h1,h2,h3{
+	        margin: 0px;
+	        padding: 0px;
+	        font-family: arial;
+        }
+        .clearfix:before,
+        .clearfix:after{
+	        content: " ";
+	        display: table;
+	        clear: both;
+        }
+        header,.banner{
+	        margin:0 auto;
+	        width: 100%;
+	        overflow: hidden;
+        }
+        .main1-inner,.main2-inner,.main3-inner,.main4-inner{
+            width: 100%;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        .main1,.main2,.main3,.main4{
+            width: 1007px;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        li{
+	        list-style: none;
+        }
+        a{
+	        text-decoration: none;
+        }
+        h1{
+	        display: none;
+        }
+      
+        /*--通用样式--*/
+        /*--header样式--*/
+        header{
+            border-bottom: #dcdcdc 3px solid;
+            margin-bottom: 15px;
+            z-index: 1;
+            background: #fff;
+            position: fixed;
+            top: 0;
+        }
+        .header-top{
+            width: 100%;
+            background: #333333;
+            height: 37px;
+           padding-left: 37px;
+             
+        }
+        .header-top span{
+            color: #fff;
+            font-size: 13px;
+            line-height: 37px;
+        }
+        .header-top-for{
+            float: right;
+            margin-right: 54px;
+        }
+        .header-top-for a{
+            display: block;
+            float: left;
+            color: aliceblue;
+            font-size: 13px;
+            line-height: 37px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .header-button{
+             width: 100%;
+            padding: 0 33px 0 33px;
+            overflow: hidden;
+            
+        }
+        .header-button .logo{
+            float: left;
+        }
+        .header-button nav{
+           width: 500px;
+            float: left;
+            line-height: 60px;
+        }
+        .header-button nav ul li {
+                list-style: none;
+				float: left;
+			}
+        .header-button nav ul li a{
+                    text-align: center;
+					text-decoration: none;
+					display:block;
+					font-weight: 700;
+					font-size:14px;
+					padding-right: 12px;
+                    padding-left: 12px;
+					color: #333333;
+		}
+        
+		nav ul li a:hover{
+            color: red;
+           }
+        .header-button-for{
+            float: right;
+            padding-top: 20px;
+            width: 377px;
+        }
+        .sousuo{
+            margin-left: 25px;
+            margin-right: 5px;
+            width: 173px;
+            height: 17px;
+            border: #fff solid 1px;
+            border-bottom: #545454 solid 3px;
+            color: #000;
+        }
+        .xc{
+            margin-left: 25px;
+        }
+        .sousuo,.x1,.xc,.xj{
+            float: left;
+            
+        }
+        /*banner样式*/
+        .banner-top{
+        	text-align: center;
+        	margin: 0 auto;
+        	font-size: 12px;
+        	margin-bottom: 3px;
+             margin-top: 106px;
+        }
+        .main1-top,.main2-top,.main3-top,.main4-top{
+        	text-align: center;
+        	margin: 0 auto;
+        	font-size: 20px;
+        	margin-bottom: 3px;
+        	font-weight: 600;
+            background: #fff;
+            padding: 30px 0 30px 0;
+        }
+        .banner{
+        	width: 1007px;
+        	height: 387px;
+        	background-image: url(images/nanbanner-bg.jpg);
+        	position: relative;
+
+        }
+        .banner a{
+        	display: block;
+        	width:70px;
+        	border: solid 2px #000;
+        	line-height: 32px;
+        	padding-left: 20px;
+        	padding-right: 20px;
+        	text-align: center;
+        	border-radius: 3px;
+        	color: #000;
+        	font-size: 15px;
+        	font-weight: 700;
+        	position: absolute;
+        	left: 620px;
+        	top:200px;
+        }
+        .banner a:hover{
+        	background: #000;
+        	
+        	color: #fff; 
+        	border-radius: 3px;
+        }
+        /*main1样式*/
+        .main1-inner{
+            background-color: #f9f9f9;
+        }
+        .main-button{
+        	width: 1007px;
+        	margin: 0 auto;
+        	background-color: #f9f9f9;
+            overflow: hidden;
+        }
+        .main-button p{
+            text-align:center;
+            
+        }
+        .main-button a{
+            text-align:center;
+            color: #000;
+            font-weight: 700;
+        }
+        .main1-left,.main1-right{
+        	width: 150px;
+        	float: left;
+
+        }
+        .main1-center{
+        	width: 380px;
+        	float: left;
+            margin-left: 175px;
+            margin-right: 90px;
+        }
+        .m1l1{
+            margin-left: 70px;
+            width: 153px;
+        }
+       .nanniu1,.nanniu4{
+            margin-top: 20px;
+       }
+       .nanniu2,.nanniu5{
+            margin-top: 40px;
+            margin-bottom: 60px;
+       }
+       .main2-left,.main2-ttop,.main2-button{
+            float: left;
+       }
+       .main2-ttop a{
+            float: right;
+       }
+       .main2-button a{
+            float: right;
+       }
+       .main2-ttop,.main2-button{
+            width: 580px;
+            margin-left: 30px;
+       }
+       .main2 p,.main3 p{
+            text-align: center;
+            color: #000;
+            font-weight: 600;
+            padding: 5px 0 5px 0;
+       }
+       .nanku2,.nanku4{
+        margin: 0 17px 0 17px;
+        /*width: 175px;*/
+       }
+       .nanmo1,.nanmo2,.nanmo3{
+        float: left;
+       }
+       .nanmo2{
+        padding: 0 10px 0 10px;
+       }
+       .main4-t a{
+        width: 142px;
+        padding: 0 26px 0 26px;
+       }
+       .main4-t a{
+        float: left;
+        font-size: 10px;
+        color: #000;
+        font-weight: 600;
+       }
+       .main4-t span{
+        color: red;
+      display: block;
+      padding-top: 20px;
+      padding-bottom: 20px;
+       }
+       /*footer样式*/
+       .footer-top{
+            overflow: hidden;
+            border-top: 2px solid #e6e6e6 ;
+            padding-top: 33px;
+            padding-bottom: 33px;
+        }
+        .ftl,.ftz,.ftr{
+            float: left;
+        }
+        .footer-top .ftl span{
+            font-weight: 800;
+        }
+        .footer-top .ftl p{
+           font-size: 12px;
+           text-align:right;
+        }
+        .footer-top .ftz input{
+            width: 242px;
+            height: 33px;
+            color: #bebac1;
+            font-size: 15px;
+        }
+        .footer-top .ftr span{
+            display: inline-block;
+            border-left: solid 2px #d8d8d8;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 10px;
+            line-height: 30px;
+        }
+        .ftz{
+            margin-left: 20px;
+            margin-right: 40px;
+        }
+        .footer-top .ftz a{
+            display: inline-block;
+            padding:5px 10px 5px 10px;
+            line-height: 33px;
+            width: 100px;
+            text-align: center;
+            background: #333333;
+            color: #fff;
+        }
+        .weixin,.weibo{
+            float: right;
+            margin-top: 10px;
+        }
+        .weixin{
+            margin-left: 10px;
+        }
+        .fti,.fbi{
+            width: 1024px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .fti span,.corp{
+            margin-left: 56px;
+        }
+        .logo2{
+            padding-left: 450px;
+            margin-bottom: 25px;
+        }
+        .zaixian{
+            margin-left: 140px;
+        }
+        .footer-button{
+           background-color: #f5f5f5;
+            overflow: hidden;
+           
+        }
+        .footer-button .fbi .nva2 a{
+            color: #341f2f;
+        }
+        .fbi .lxwm{
+            display: block;
+            font-size: 23px;
+            font-weight: 500;
+            border-top: solid 2px #000;
+            padding-top: 30px;
+            padding-bottom: 24px;
+            width: 122px;
+            margin: 0 auto;
+            margin-top: 29px;
+            text-align: center;
+        }
+        .corp{
+            width: 300px;
+            font-size: 10px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .copy{
+            width: 100%;
+            font-size: 10px;
+            
+        }
+        .copy .spancopy{
+            width: 100%;
+            text-align: right;
+            font-size: 10px;
+            display: block;
+            background: #b5b5b5;
+            padding: 5px 0 5px 0;
+            margin-top: 30px;
+        }
+         .top-3{
+            position: fixed;
+           top:440px;
+           right: 10px
+        }
+            /*d登录页*/
+        .denluye{
+            display: none;
+            overflow: hidden;
+            width: 260px;
+            position:fixed;
+            background: #fff;
+            top:30px;
+            right: 50px;
+            z-index: 2;
+            border:solid 2px #000;
+        }
+         .denluye input{
+            width: 210px;
+            height: 25px;
+            color: #000;
+            font-size:12px;
+            border:solid 1px #b1b1b1;
+            margin-left: 20px;
+            margin-bottom: 5px;
+
+        }
+        #duigouy{
+            color: red;
+            width: 12px;
+            height: 12px;
+            border: solid 2px #000;
+            margin: 2px 0 0 0;
+            padding: 0;
+
+        }
+        .denluye p {
+            font-size: 12px;
+            color: #000;
+            margin-left: 36px; 
+        }
+        .denluye p span{
+            margin-right: 56px;
+        }
+        .in2{
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        .denlua,.denlub,.denluc{
+            color: #fff;
+            display: block;
+            padding: 9px 10px 9px 10px;
+            margin-left: -20px;
+            width: 200px;
+            text-align: center;
+             margin-top: 8px;
+            margin-bottom: 8px;
+
+        }
+        .denluc{
+            background: #fff;
+            color: #000;
+            border: solid 2px #000;
+          
+        }
+        .denlua{
+            background: #c31e2e;
+           
+        }
+        .denlub{
+            background: #333333;
+            
+        }
+        .denluye .wang{
+            margin-right: 20px;
+        }
+        .denluye h2{
+            font-size: 13px;
+            color: #000;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 5px;
+           
+        }
+        .denluye hr{
+            text-align: center;
+            width: 240px;
+        }
+        .qqw{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .pmm{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+  </style>
+  <script> 
+    function xianshi(){
+            document.getElementById('denluyea').style.display="block";
+        }
+        function xiaoshi(){
+            document.getElementById('denluyea').style.display="none";
+        }
+        function tingliu(){
+            document.getElementById("denluyea").style.display="block"
+        }
+         function tingliua(){
+            document.getElementById("denluyea").style.display="none"
+        }
+  </script>
+</head>
+<body> 
+            <!-- top -->
+       <a href="#" class="top-3"><img src="images/top_03.jpg" alt=""></a>
+       <!-- 登录页 -->
+        <div class="denluye" id="denluyea" onmousemove="tingliu()" onmouseleave="tingliua()">
+            <h2>登录</h2>
+            <hr>
+            <input type="text" placeholder="*请输入您的手机号">
+            <input type="text" class="in2" placeholder="*请输入密码">
+            <p><input type="checkbox" id="duigouy" value=""><span>记住我 </span><u><a href="#" class="wang" style="color:#000;">忘记密码？</a></u></p>
+            <p><a href="#" class="denlua">登录</a></p>
+             <p class="pmm">使用第三方账号登录：<a href="#"><img class="qqw" src="images/qq.jpg" alt=""></a><a href="#"><img class="qqw" src="images/qq2.jpg" alt=""></a></p>
+             <hr>
+            <p><a href="zhuce.html" class="denlub">注册</a></p>
+             <p><a href="#" class="denluc">订单查询</a></p> 
+        </div>
+        <!-- header -->
+    <a href="#" class="top-3"><img src="images/top_03.jpg" alt=""></a>
+	 <header>
+        <div class="header-top">
+            <span>受春节假期影响，1月26日15点之后的订单将于1月30日起寄出，敬请谅解。</span>
+            <div class="header-top-for">
+                <a href="#">会员登录</a>
+                <a href="#"  onmousemove="xianshi()" onmouseleave="xiaoshi()">用户登录</a>
+                <a href="#">在线客服</a>
+            </div>
+        </div>
+        <div class="header-button">
+            <div class="logo clearfix">
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <h1>LEVI'S</h1>
+            <nav class="clearfix">
+                <ul>
+                     <li><a href="#">新品</a></li>
+                    <li><a href="#">男装</a></li>
+                    <li><a href="nvzhuang.html">女装</a></li>
+                    <li><a href="tongzhuang.html">童装</a></li>
+                    <li><a href="#">精选系列</a></li>
+                    <li><a href="index.html">SALE</a></li>
+                    <li><a href="dongtai.html">品牌动态</a></li>
+                </ul>
+            </nav>
+            <div class="header-button-for clearfix">
+                <a href="#" class="x1"><img src="images/x1.jpg" alt=""></a>
+                 <input class="sousuo" placeholder="羽绒服" type="texe">
+               
+                <a href="#" class="xj"><img src="images/xj.jpg" alt=""></a>
+                 <a href="#" class="xc"><img src="images/xc.jpg" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="banner-top">
+		Levi's 官方商城 全场包邮 注册即送100元优惠券
+    </div>
+    <div class="banner">
+		<a href="#">浏览更多</a>
+    </div>
+    <!-- main-1样式 -->
+    <div class="main1-top">
+           选择品类
+     </div>
+    <div class="main1-inner">
+       
+    	<div class="main1">
+			
+    		<div class="main-button">
+    			<div class="main1-left clearfix">
+				    <div class="m1l1 clearfix">
+                        <div class="nanniu1"><img src="images/nanniu1.jpg" alt=""><p><a href="#">牛仔夹克</a></p></div>
+                        <div class="nanniu2"><img src="images/nanniu2.jpg" alt=""><p><a href="#">夹克外套</a></p></div>
+                        <div class="nanniu3"><img src="images/nanniu3.jpg" alt=""><p><a href="#">羽绒服&棉服</a></p></div>
+                    </div>
+                    
+    			</div>
+    			<div class="main1-center clearfix">
+				    <img src="images/nanniua.jpg" alt="">
+    			</div>
+    			<div class="main1-right clearfix">
+				     <div class="nanniu4"><img src="images/nanniu4.jpg" alt=""><p><a href="#">毛衣&卫衣</a></p></div>
+                        <div class="nanniu5"><img src="images/nanniu5.jpg" alt=""><p><a href="#">衬衫</a></p></div>
+                        <div class="nanniu6"><img src="images/nanniu6.jpg" alt=""><p><a href="#">休闲裤</a></p></div>
+    			</div>
+    		</div>
+    		
+    	</div>
+    </div>
+    
+    <!-- main-2样式 -->
+    <div class="main2-inner">
+    	<div class="main2">
+			<div class="main2-top">
+				选择版型
+    		</div>
+            <a href="#" class="main2-left clearfix">
+                <img src="images/nankua.jpg" alt=""><p>511*修身窄库</p>
+            </a>
+            <div class="main2-ttop clearfix">
+                <a href="#"><img src="images/nanku1.jpg" alt=""><p>501*原创直脚</p></a>
+                <a href="#" class="nanku2"><img src="images/nanku2.jpg" alt=""><p>501*CI经典窄库</p></a>
+                <a href="#"><img src="images/nanku3.jpg" alt=""><p>501*紧身窄库</p></a>
+            </div>
+            <div class="main2-button clearfix">
+                <a href="#"><img src="images/nanku4.jpg" alt=""><p>505*宽松直脚</p></a>
+                <a href="#" class="nanku4"><img src="images/nanku5.jpg" alt=""><p>513*修身直筒</p></a>
+                <a href="#"><img src="images/nanku6.jpg" alt=""><p>522*标准窄脚</p></a>
+            </div>
+    	</div>
+    </div>
+     
+    <!-- main-3样式 -->
+    <div class="main3-inner">
+    	<div class="main3">
+		 	<div class="main3-top">
+				精选系列
+   		 	</div>
+            <div class="nanmo1"><a href=""><img src="images/nanmo1.jpg" alt=""></a><p>LINE8</p><p>LINE8系列</p></div>
+            <div class="nanmo2"><a href=""><img src="images/nanmo2.jpg" alt=""></a><p>LEVI'SMADE&CRAFTED</p><p>高端精工系列</p></div>
+            <div class="nanmo3"><a href=""><img src="images/nanmo3.jpg" alt=""></a><p>SKATEDAROING</p><p>滑板系列</p></div>
+   		 </div>
+    </div>
+    
+    <!-- main-4样式 -->
+    <div class="main4-inner">
+    	<div class="main4">
+		 	<div class="main4-top">
+				单品推荐
+    		</div>
+            <div class="main4-t">
+                <a href="#"><img src="images/dan1.jpg" alt=""><p>line&系列511男士修身窄脚灰色牛仔裤</p><span>¥489.00</span></a>
+                <a href="#"><img src="images/dan2.jpg" alt=""><p>男士504系列舒适直属牛仔裤</p><span>¥1900.00</span></a>
+                <a href="#"><img src="images/dan3.jpg" alt=""><p>男士纯棉连帽卡其色夹克薄外套</p><span>¥450.00</span></a>
+                <a href="#"><img src="images/dan4.jpg" alt=""><p>男士织花深蓝灰套头时尚毛线</p><span>¥450.00</span></a>
+                <a href="#"><img src="images/dan5.jpg" alt=""><p>男士织花深蓝白灰套头毛衣</p><span>¥350.00</span></a>
+            </div>
+    	</div>
+    </div>
+    <!-- footer样式 -->
+    <footer>
+        <div class="footer-top">
+            <div class="fti">
+            <div class="ftl clearfix">
+                <span>The Latest From Levi's</span>
+                <p>第一时间获取最新资讯</p>
+            </div>
+            <div class="ftz clearfix">
+                <input type="text" value="请输入您的邮箱">
+                <a href="#">订阅</a>
+            </div>
+            <div class="ftr clearfix">
+                <a href="#" class="weixin clearfix"><img src="images/weixin.jpg" alt=""></a>
+                <a href="#" class="weibo clearfix"><img src="images/weibo.jpg" alt=""></a>
+                <span>关注我们：</span>
+            </div>
+            </div>
+        </div>
+        <div class="footer-button"> 
+            <div class="fbi">
+                <div class="logo2"><img src="images/logo2.jpg" alt=""></div>
+                <div class="nva2">                   
+                        <a class="zaixian" href="#">在线客服</a><img src="images/gang.jpg" alt="">
+                        <a href="#">门店查找</a><img src="images/gang.jpg" alt="">
+                        <a href="#">网站导航</a><img src="images/gang.jpg" alt="">
+                        <a href="#">支付与配送</a><img src="images/gang.jpg" alt="">
+                        <a href="#">退换政策</a><img src="images/gang.jpg" alt="">
+                        <a href="#">帮助</a>            
+                </div>
+                <span class="lxwm">联系我们</span>
+              <div class="corp">
+                <p class="corp">021-55369615或400-1080-501(9:00-18:00)
+                MBXCHNcustomservice@levi.com</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="copy">
+                    <span class="spancopy">利惠商业（上海）有限公司 | 沪ICP备12026822号 | <img src="images/jinghui.jpg" alt="">沪公网安备 3101006020000236号 | <img src="images/gongshang_13.jpg" alt="">上海工商</span>
+        </div>
+    </footer>
+</body>
+</html>
